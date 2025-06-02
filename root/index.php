@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sistem Peminjaman Ruangan</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<body class="bg-gray-900 text-white h-screen overflow-hidden flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="flex items-center justify-between px-8 py-4 bg-gray-800 shadow">
+  <div class="text-xl font-semibold">Sistem Peminjaman Ruangan</div>
+  <ul class="flex space-x-6 text-sm items-center">
+    <li><a href="daftar_ruangan.php" class="hover:text-blue-400">Daftar Ruangan</a></li>
+    <li><a href="riwayat_peminjaman.php" class="hover:text-blue-400">Riwayat Peminjaman</a></li>
+    <li><a href="daftar_peminjaman.php" class="hover:text-blue-400">Daftar Peminjaman</a></li>
+    
+    <!-- Dropdown Procedure -->
+    <li class="relative group">
+      <button class="hover:text-blue-400 focus:outline-none">Procedure</button>
+      <ul class="absolute z-10 hidden group-hover:block bg-gray-700 text-white rounded shadow mt-1 min-w-max">
+        <li><a href="procedure_ismul.php" class="block px-4 py-2 hover:bg-gray-600">Ismul Adjham</a></li>
+        <li><a href="procedure_nadim.php" class="block px-4 py-2 hover:bg-gray-600">Nadim Fadhilah</a></li>
+        <li><a href="procedure_judith.php" class="block px-4 py-2 hover:bg-gray-600">Judithya Angeline</a></li>
+        <li><a href="procedure_kevin.php" class="block px-4 py-2 hover:bg-gray-600">Kevin Novaldy</a></li>
+      </ul>
+    </li>
+
+    <li><a href="logout.php" class="hover:text-blue-400">Logout</a></li>
+  </ul>
+</nav>
+
+  <!-- Form Login -->
+  <div class="flex-1 flex flex-col items-center justify-center">
+    <h2 class="text-3xl font-bold mb-4">Masukan Akun Anda</h2>
+
+    <!-- Tab -->
+    <div class="flex border border-gray-500 rounded-lg overflow-hidden mb-4">
+      <button class="bg-gray-800 px-[54px] py-2 text-white font-medium focus:outline-none">Login</button>
+      <a href="register.html" class="px-[54px] py-2 text-white font-medium hover:bg-gray-700">Register</a>
+    </div>
+
+    <!-- Form Box -->
+    <form action="login.php" method="POST" class="bg-gray-800 rounded-xl p-6 w-80 space-y-2 shadow-md">
+      <h3 class="text-lg font-semibold">Welcome Back</h3>
+
+      <label class="block text-sm">Email</label>
+      <input name="email" type="email" placeholder="Masukan email anda"
+             class="w-full px-3 py-2 bg-gray-700 rounded-md text-white text-sm" required />
+
+      <label class="block text-sm">Password</label>
+      <input name="password" type="password" placeholder="Masukan kata sandi anda"
+             class="w-full px-3 py-2 bg-gray-700 rounded-md text-white text-sm" required />
+
+      <button type="submit"
+              class="w-full bg-blue-200 text-black font-semibold py-2 rounded-md flex items-center justify-center space-x-2">
+        <img src="https://img.icons8.com/fluency-systems-filled/48/enter-2.png" alt="Login Icon" class="w-5 h-5" />
+        <span>Login</span>
+      </button>
+    </form>
+  </div>
+</body>
+</html>
